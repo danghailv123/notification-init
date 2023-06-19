@@ -14,6 +14,6 @@ public interface PaymentRepository extends JpaRepository<Payment,Integer> {
     Page<Payment> findByName(@Param("name")String name, Pageable pageable);
 
 
-    @Query(value = "select new com.management.motelroom.model.dto.SummaryPaymentDto(p.username,sum(p.money)) from Payment p where p.username like %:keyword% order by p.username,p.money")
+    @Query(value = "select new com.management.motelroom.model.dto.SummaryPaymentDto(p.username,sum(p.money)) from Payment p where p.username like %:keyword% group by p.username")
     Page<SummaryPaymentDto> findBySummary(@Param("keyword")String keyword,Pageable pageable);
 }
