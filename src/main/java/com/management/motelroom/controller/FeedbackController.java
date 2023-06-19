@@ -31,4 +31,9 @@ public class FeedbackController {
                                                @RequestParam(name = "limit", defaultValue = "30") Integer limit) {
         return feedbackService.getPage(page, limit);
     }
+
+    @PutMapping
+    public ResponseEntity<FeedbackDto> readFeedbackDtoResponseEntity(@PathVariable Integer id) {
+        return ResponseEntity.ok().body(feedbackService.readFeedback(id));
+    }
 }
