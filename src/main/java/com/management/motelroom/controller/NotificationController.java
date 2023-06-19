@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RequestMapping("/notification")
 @CrossOrigin
-
 public class NotificationController {
     private final NotificationService notificationService;
 

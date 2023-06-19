@@ -32,7 +32,7 @@ public class FeedbackController {
         return feedbackService.getPage(page, limit);
     }
 
-    @PutMapping
+    @GetMapping("/read/{id}")
     public ResponseEntity<FeedbackDto> readFeedbackDtoResponseEntity(@PathVariable Integer id) {
         return ResponseEntity.ok().body(feedbackService.readFeedback(id));
     }
