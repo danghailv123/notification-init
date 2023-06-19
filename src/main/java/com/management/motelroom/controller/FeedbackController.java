@@ -22,7 +22,7 @@ public class FeedbackController {
     }
 
     @PostMapping
-    public ResponseEntity<FeedbackDto> createFeedback(FeedbackDto feedbackDto) {
+    public ResponseEntity<FeedbackDto> createFeedback(@RequestBody FeedbackDto feedbackDto) {
         return ResponseEntity.ok().body(feedbackService.createFeedback(feedbackDto));
     }
 
