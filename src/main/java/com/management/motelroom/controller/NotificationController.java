@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RequiredArgsConstructor
 @RequestMapping("/notification")
+@CrossOrigin
+
 public class NotificationController {
     private final NotificationService notificationService;
 

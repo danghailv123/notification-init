@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RequiredArgsConstructor
 @RequestMapping("/payment")
+@CrossOrigin
+
 public class PaymentController {
     private final PaymentService paymentService;
 
